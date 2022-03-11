@@ -10,7 +10,7 @@ import WebViewer, { WebViewerInstance } from '@pdftron/webviewer';
 export class AppComponent implements OnInit, AfterViewInit {
   // @ts-ignore
   @ViewChild('viewer') viewer: ElementRef;
-  @Output() coreControlsEvent:EventEmitter<string> = new EventEmitter();
+  @Output() coreControlsEvent: EventEmitter<string> = new EventEmitter();
 
   private wvInstance: WebViewerInstance | null;
   private documentLoaded$: Subject<void>;
@@ -53,8 +53,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   getDocumentLoadedObservable() {
     return this.documentLoaded$.asObservable();
