@@ -21,9 +21,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    WebViewer({
-      path: '../lib',
-    }, this.viewer.nativeElement).then(instance => {
+    WebViewer(
+      {
+        path: '../lib',
+        initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/demo-annotated.pdf',
+      },
+      this.viewer.nativeElement
+    ).then(instance => {
       this.wvInstance = instance;
 
       this.coreControlsEvent.emit(instance.UI.LayoutMode.Single);
