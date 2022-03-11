@@ -17,7 +17,7 @@
     "prettier:write": "prettier --write ./**/*.{ts,js,scss,html,json,*rc}",
     "precommit": "lint-staged && npm run lint && npm run test:ci",
     "prepush": "npm run test:ci",
-    "postinstall": "webdriver-manager update --standalone false --gecko false; node tools/copy-webviewer-files.js"
+    "postinstall": "webdriver-manager update --standalone false --gecko false && node tools/copy-webviewer-files.js"
   },
   "private": true,
   "dependencies": {
